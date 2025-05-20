@@ -1,0 +1,124 @@
+.summary {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.summary h2,
+.summary h3 {
+  margin-bottom: 0.5rem;
+  color: #1e3a8a; /* tmavší modrá pro nadpisy */
+}
+
+.summary__head {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary__photo {
+  width: 300px;  /* zvětšení šířky obrázku */
+  height: 225px; /* zvětšení výšky obrázku */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.summary__head-property,
+.summary__head-room {
+  flex: 1;
+}
+
+.summary__name {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e3a8a; /* modrá pro název hotelu a pokoje */
+}
+
+.summary__adress,
+.summary__city,
+.summary__rating,
+.summary__room-type,
+.summary__room-price,
+.summary__number,
+.summary__dates,
+.summary__guests,
+.summary__services,
+.summary__room-total,
+.summary__check-in,
+.summary__check-out,
+.summary__service {
+  margin: 0.2rem 0;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.summary__detail,
+.summary__services,
+.summary__cancal {
+  margin-top: 2rem;
+}
+
+.summary__room-price,
+.summary__room-total {
+  font-weight: bold;
+  color: #2563eb; /* modrá pro ceny */
+}
+
+.summary__service {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.summary__service::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb; /* modrá pro bullet point */
+}
+
+.summary__cancel-text p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  color: #7f8c8d;
+}
+
+.summary__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary__photo {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.summary__head-property,
+.summary__head-room {
+  flex: 1 1 250px;
+  min-width: 0;
+}
+
+.summary__head-room {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .summary__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .summary__head-room {
+    text-align: left;
+  }
+}
